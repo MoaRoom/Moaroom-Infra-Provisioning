@@ -1,0 +1,41 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: professor-ubuntu
+  namespace: professor-ns
+  labels:
+    app: professor-label
+spec:
+  containers:
+    - name: professor-ubuntu
+      image: ryann3/professor-ubuntu:5.0
+      ports:
+        - name: nginx-port
+          containerPort: 80
+        - name: ssh-port
+          containerPort: 22
+        - name: webssh-port
+          containerPort: 8887
+        - name: server-port
+          containerPort: 8002
+      resources: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: professor-ubuntu-svc
+  namespace: professor-ns
+spec:
+  ports:
+    - name: http
+      port: 81
+      targetPort: nginx-port
+    - name: webssh
+      port: 8887
+      targetPort: webssh-port
+    - name: server
+      port: 8002
+      targetPort: server-port
+  selector:
+    app: professor-label
+  type: LoadBalancer
