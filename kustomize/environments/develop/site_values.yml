@@ -7,3 +7,34 @@ metadata:
     app: control-label
 spec:
   replicas: 2
+  selector:
+    matchLabels:
+      app: control-label
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: control-label
+    spec:
+      containers:
+        - image: "ryann3/control-ubuntu:5.0"
+          imagePullPolicy: Always
+          name: control-ubuntu
+          ports:
+            - containerPort: 80
+              name: nginx-port
+              protocol: TCP
+            - containerPort: 22
+              name: ssh-port
+              protocol: TCP
+            - containerPort: 8003
+              name: server-port
+              protocol: TCP
+            - containerPort: 8886
+              name: webssh-port
+              protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+      serviceAccount: access-to-apiserver-sa
+      serviceAccountName: access-to-apiserver-sa
