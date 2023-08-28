@@ -60,21 +60,25 @@ spec:
     matchLabels:
       app: control-label
   template:
-    containers:
-      - name: control-ubuntu
-        image: ryann3/control-ubuntu:5.0
-        imagePullPolicy: Always
-        ports:
-          - name: nginx-port
-            containerPort: 80
-          - name: ssh-port
-            containerPort: 22
-          - name: server-port
-            containerPort: 8003
-          - name: webssh-port
-            containerPort: 8886
-        resources: {}
-    serviceAccountName: access-to-apiserver-sa
+    metadata:
+      labels:
+        app: control-label
+    spec:
+      containers:
+        - name: control-ubuntu
+          image: ryann3/control-ubuntu:5.0
+          imagePullPolicy: Always
+          ports:
+            - name: nginx-port
+              containerPort: 80
+            - name: ssh-port
+              containerPort: 22
+            - name: server-port
+              containerPort: 8003
+            - name: webssh-port
+              containerPort: 8886
+          resources: {}
+      serviceAccountName: access-to-apiserver-sa
 ---
 apiVersion: v1
 kind: Service
