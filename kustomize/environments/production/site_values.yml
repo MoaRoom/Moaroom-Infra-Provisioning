@@ -1,0 +1,8 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: control-ubuntu
+  namespace: control-ns
+  labels:
+    app: control-label
+    replicas: 2
