@@ -1,5 +1,7 @@
 # Moaroom-Provisioning-Infra
 
+![졸프_SW아키텍처 drawio](https://github.com/MoaRoom/Moaroom-Provisioning-Infra/assets/68985625/f780cd69-5830-4ff3-9d93-6683fe224227)
+
 This repository conatins 2 elements
 
 1. Terraform provisioning aws eks
