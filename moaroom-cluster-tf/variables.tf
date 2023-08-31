@@ -15,7 +15,7 @@ variable "azs" {
 variable "cluster_name" {
   description = "Cluster Name"
   type = string
-  default = null
+  default = "moaroom-cluster"
 }
 
 variable "cluster_version" {
