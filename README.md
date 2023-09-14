@@ -1,6 +1,6 @@
 # Moaroom-Provisioning-Infra
 
-![졸프_SW아키텍처 drawio](https://github.com/MoaRoom/Moaroom-Provisioning-Infra/assets/68985625/af4874cc-7e31-4198-bb5f-c4e38d80f3cf)
+![졸프_SW아키텍처 drawio](https://github.com/MoaRoom/.github/assets/68985625/97aadc25-247e-48b3-a80a-095c614cdcc9)
 
 
 This repository conatins 2 elements
