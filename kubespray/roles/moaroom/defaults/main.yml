@@ -1,0 +1,24 @@
+---
+# defaults file for artiference
+artiference_namespace: artiference
+istio_namespace: artiference-istio-system
+
+# gateway setting
+node_port: 30090
+artiference_host: "artiference.duckdns.org"
+
+# hosts
+grafana_host: "grafana-artiference.duckdns.org"
+kibana_host: "kibana.artiference.dudaji.com"
+harbor_host: "harbor.artiference.dudaji.com"
+minio_host: "minio-artiference.duckdns.org"
+
+# storage setting
+storage_node_name: master # storage node should have large disk space
+nfs_path: "/home/artiference_db/{{ artiference_namespace }}" # this is for  nfs server
+artiference_storageclass: "{{ artiference_namespace }}-nfs" # this is nfs server
+
+artiference_tag: 0.4.0
+inference_manager_tag: "nhn-apply-sso"
+web_tag: "nhn-apply-sso"
+docker_origin: dudaji
