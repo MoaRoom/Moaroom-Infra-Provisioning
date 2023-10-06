@@ -1,6 +1,6 @@
 # Moaroom-Provisioning-Infra
 
-![졸프_SW아키텍처 drawio](https://github.com/MoaRoom/.github/assets/68985625/61a62ef5-e420-4263-aaf1-c8e8a46396b4)
+![졸프_SW아키텍처 drawio](https://github.com/MoaRoom/.github/assets/68985625/04d38d18-ff2b-4402-8792-2dcffa97da02)
 
 This repository conatins 2 elements
 
@@ -14,6 +14,3 @@ This repository conatins 2 elements
 
 ### 참고 자료
 
-- [ArgoCD Init](https://wlsdn3004.tistory.com/37)
-- [Github Action + Kustomize + ArgoCD](https://mrdevops.medium.com/github-action-kustomize-argocd-94e5abfcf6bd)
-- [namespace issue](https://github.com/argoproj/argo-cd/issues/3181)
